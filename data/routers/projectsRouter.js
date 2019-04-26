@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     console.log(req.params)
     try {
-        const projects = await Projects.get()
+        const projects = await Projects.get(req.params.id)
         res.status(200).json(projects)
     } catch(error) {
         console.log(error)
@@ -76,6 +76,19 @@ router.post('/', async (req, res) => {
         });
     }  
 });
+
+router.get('/:id/actions', async (req, res) => {
+    console.log(req.params)
+    try {
+        const projects = await Projects.getProjectActions(req.params.id)
+        res.status(200).json(projects)
+    } catch(error) {
+        console.log(error)
+        res.status(500).json({
+            message: 'Error retrieving that project\s actions'
+        })
+    }
+})
 
 
 module.exports = router
