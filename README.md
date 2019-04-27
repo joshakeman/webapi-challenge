@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+I learned express is used with Node.js for creating backend applications, similar to the way we use React for creating front end applciations. Express allows easy handling of api calls and other backend features.
+
 - [ ] Describe Middleware?
+
+Middleware can modify calls by accessing the req and res, to add some functionality or feature.
 
 - [ ] Describe a Resource?
 
+Resources are any kind of data that is relevant to your application and can be sent or retrieved with api calls.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+Apis can return status codes and error/success messages.
+
 - [ ] How can we partition our application into sub-applications?
+
+We can use routing in express similarly to the way we use it in react.
 
 ## Project Setup
 
